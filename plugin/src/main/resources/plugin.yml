@@ -1,6 +1,6 @@
-name: ExamplePlugin
+name: SuperJumpPl
 version: '${version}'
-main: net.ledestudio.example.plugin.ExamplePlugin
+main: net.ledestudio.example.plugin.SuperJumpPl
 description: An example plugin
 author: Lede
 website: https://ledestudio.net

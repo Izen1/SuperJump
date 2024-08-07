@@ -11,6 +11,8 @@ dependencies {
 
     // https://papermc.io/
     compileOnly("io.papermc.paper:paper-api:${paper_version}")
+    implementation "net.kyori:adventure-text-minimessage:4.17.0"
+
 }
 
 tasks {
