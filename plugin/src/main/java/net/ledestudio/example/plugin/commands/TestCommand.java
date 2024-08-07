@@ -19,7 +19,7 @@ public class TestCommand extends BukkitCommand {
     public boolean execute(@NotNull CommandSender sender, @NotNull String label, @NotNull String[] args) {
         if (!(sender instanceof Player player)) return false;
         if (args.length == 0) {
-            player.sendMessage(Component.text("잘못된 사용법"));
+            player.sendMessage(Component.text("Fail Uses"));
             return false;
         }
         if (args.length == 1) {
@@ -28,6 +28,10 @@ public class TestCommand extends BukkitCommand {
                     player.getInventory().addItem(shoesController.getItem());
                 }
                 case "jump" -> {
+                    if (!shoesController.hasItem(player)) {
+                        player.sendMessage(Component.text("Not has Shoes"));
+                        return false;
+                    }
                     shoesController.ability(player);
                 }
             }

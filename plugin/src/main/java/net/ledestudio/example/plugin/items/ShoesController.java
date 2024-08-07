@@ -18,7 +18,7 @@ public class ShoesController implements ShoesInterface{
         meta.setUnbreakable(true);
 
         MiniMessage mm = MiniMessage.miniMessage();
-        Component name = mm.deserialize("<gradient:#de330c:#000000>슈퍼점프</gradient>");
+        Component name = mm.deserialize("<gradient:#de330c:#000000>Super-Jump</gradient>");
         meta.displayName(name);
 
         item.setItemMeta(meta);
@@ -27,7 +27,7 @@ public class ShoesController implements ShoesInterface{
 
     @Override
     public boolean hasItem(Player player) {
-        return Objects.requireNonNull(player.getInventory().getBoots()).equals(getItem());
+        return player.getInventory().getBoots() != null && player.getInventory().getBoots().equals(getItem());
     }
 
     @Override
